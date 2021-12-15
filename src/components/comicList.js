@@ -23,9 +23,23 @@ const ComicList = (props) => {
     swipeToSlide: true,
     responsive: [
         {
+          breakpoint: 950,
+          settings: {
+            slidesToShow: 4.1,
+            slidesToScroll: 1,
+          }
+        },
+        {
           breakpoint: 769,
           settings: {
             slidesToShow: 3,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2.1,
             slidesToScroll: 1,
           }
         },

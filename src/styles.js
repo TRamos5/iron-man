@@ -1,7 +1,9 @@
 import styled from "styled-components"
 
 const device = {
-    mobile: '(max-width: 375px)',
+    mobile: '(max-width: 355px)',
+    mobileXL: '(max-width: 475px)',
+    tabletSM: '(max-width: 600px)',
     tablet: '(max-width: 950px)',
     desktop: '(max-width: 1440px)'
 }
@@ -23,7 +25,11 @@ export const Section = styled.section`
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%);
     }
 
-    @media ${device.mobile}{
+    @media ${device.tabletSM}{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    }
+
+    @media ${device.mobileXL}{
         padding: 25px 20px;
         min-height: 800px;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
@@ -41,8 +47,16 @@ export const Logo = styled.img`
         height: 60px;
     }
 
-    @media ${device.mobile} {
+    @media ${device.tabletSM}{
+        height: 45px;
+    }
+
+    @media ${device.mobileXL} {
         height: 40px;
+    }
+
+    @media ${device.mobile} {
+        height: 30px;
     }
 `
 
@@ -57,7 +71,11 @@ export const MainAnchor = styled.a`
     color: #FFFFFF;
     text-decoration: none;
 
-    @media ${device.mobile} {
+    @media ${device.tabletSM}{
+        margin-right: 10px
+    }
+
+    @media ${device.mobileXL} {
         margin-right: 10px
     }
 `
@@ -72,8 +90,18 @@ export const HeaderCTA = styled.button`
     border: none;
     cursor: pointer;
 
-    @media ${device.mobile} {
+    @media ${device.tabletSM}{
+        padding: 10px 18px;
+        margin-left: 0;
+    }
+
+    @media ${device.mobileXL} {
         padding: 5px 14px;
+        margin-left: 0;
+    }
+
+    @media ${device.mobile} {
+        padding: 4px 12px;
         margin-left: 0;
     }
 `
@@ -83,7 +111,7 @@ export const SectionHero = styled.section`
     flex-direction: row;
     width: 100%;
 
-    @media ${device.mobile} {
+    @media ${device.mobileXL} {
         flex-direction: column-reverse;
     }
 `
@@ -92,7 +120,7 @@ export const LeftBodyCTA = styled.div`
     width: 707px;
     margin-top: 5%;
 
-    @media ${device.mobile} {
+    @media ${device.mobileXL} {
         width: inherit;
         margin-top: 0;
         display: flex;
@@ -109,7 +137,11 @@ export const CopyCTA = styled.p`
         font-size: 20px;
     }
 
-    @media ${device.mobile} {
+    @media ${device.tabletSM}{
+        font-size: 18px;
+    }
+
+    @media ${device.mobileXL} {
         text-align: center;
         font-size: 16px;
     }
@@ -136,7 +168,7 @@ export const HeroCTAButton = styled.button`
         width: 180px;
     }
 
-    @media ${device.mobile} {
+    @media ${device.mobileXL} {
         margin-top: 0;
         height: 45px;
         width: 200px;
@@ -151,7 +183,15 @@ export const RightBodyCTA = styled.div`
     margin-left: 15%;
 
     @media ${device.tablet}{
-        margin-left: 8%;
+        margin-left: 0;
+    }
+
+    @media ${device.mobileXL}{
+        margin-left: 15%;
+    }
+
+    @media ${device.mobile}{
+        margin-left: 0;
     }
 `
 export const HeroImg = styled.img`
@@ -177,7 +217,7 @@ export const DescriptionSection = styled.section`
         margin-bottom: 0;
     }
 
-    @media ${device.mobile} {
+    @media ${device.mobileXL} {
         padding: 0 20px;
         margin-bottom: 0;
     }
@@ -193,7 +233,7 @@ export const DescriptionTitle = styled.h3`
         text-align: center;
     }
 
-    @media ${device.mobile} {
+    @media ${device.mobileXL} {
         font-size: 24px;
         color: #000302;
         letter-spacing: 0;
@@ -224,9 +264,19 @@ export const DescriptionImg = styled.img`
         width: 400px;
     }
 
-    @media ${device.mobile} {
+    @media ${device.tabletSM}{
+        height: 382px;
+        width: 382px;
+    }
+
+    @media ${device.mobileXL} {
         height: 335px;
         width: 335px;
+    }
+
+    @media ${device.mobile}{
+        height: 260px;
+        width: 260px;
     }
 `
 
@@ -239,7 +289,7 @@ export const DescriptionRight = styled.div`
         grid-template-columns: 1fr;
     }
 
-    @media ${device.mobile} {
+    @media ${device.mobileXL} {
         margin-bottom: 20px;
     }
 `
